@@ -9,6 +9,7 @@ import (
 	"strconv"
 
 	"github.com/gocolly/colly"
+	"github.com/gocolly/colly/extensions"
 	"github.com/gocolly/colly/queue"
 )
 
@@ -26,6 +27,8 @@ func main() {
 		colly.URLFilters(regexp.MustCompile("https://developer\\.android\\.com/reference/.+")),
 		colly.MaxDepth(1),
 	)
+
+	extensions.RandomUserAgent(c)
 
 	q, _ := queue.New(8, nil)
 
@@ -56,7 +59,7 @@ func main() {
 	})
 
 	/*c.OnHTML("a[class=__asdk_search_extension_link__]", func(e *colly.HTMLElement) {
-	    log.Println("Source file link:", e.Attr("href"))
+		log.Println("Source file link:", e.Attr("href"))
 	})*/
 
 	q.AddURL("https://developer.android.com/reference/classes")
