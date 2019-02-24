@@ -2,7 +2,9 @@ package main
 
 import (
 	"encoding/json"
+	"io/ioutil"
 	"log"
+	"os"
 	"regexp"
 	"strconv"
 
@@ -11,6 +13,7 @@ import (
 )
 
 type ApiClass struct {
+	Index               int    `json:"index"`
 	Name                string `json:"name"`
 	Link                string `json:"link"`
 	Description         string `json:"description"`
@@ -26,11 +29,12 @@ func main() {
 
 	q, _ := queue.New(8, nil)
 
-	// API class count: 4387
-	apiClasses := make([]ApiClass, 5000)
+	var index int
+	var apiClasses []ApiClass
 
 	// todo correctly parse complex cases like ActivityInstrumentationTestCase<T extends Activity>
 	c.OnHTML("tr[data-version-added]", func(e *colly.HTMLElement) {
+		index++
 		name := e.ChildText("td[class=jd-linkcol]>a[href]")
 		link := e.ChildAttr("td[class=jd-linkcol]>a[href]", "href")
 		description := e.ChildText("td[class=jd-descrcol]")
@@ -39,6 +43,7 @@ func main() {
 		deprecatedInVersion, _ := strconv.Atoi(e.Attr("data-version-deprecated"))
 
 		apiClass := ApiClass{
+			Index:               index,
 			Name:                name,
 			Link:                link,
 			Description:         description,
@@ -57,6 +62,7 @@ func main() {
 	q.AddURL("https://developer.android.com/reference/classes")
 	q.Run(c)
 
-	jsonData, _ := json.MarshalIndent(apiClasses, "", " ")
+	jsonData, _ := json.MarshalIndent(apiClasses, "", "    ")
+	ioutil.WriteFile("classes_index.json", jsonData, os.ModePerm)
 	log.Println(string(jsonData))
 }
