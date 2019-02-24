@@ -16,6 +16,7 @@ import (
 type ApiClass struct {
 	Index               int    `json:"index"`
 	Name                string `json:"name"`
+	NameWithGenerics    string `json:"name_with_generics"`
 	Link                string `json:"link"`
 	Description         string `json:"description"`
 	AddedInVersion      int    `json:"added_in_version"`
@@ -35,10 +36,10 @@ func main() {
 	var index int
 	var apiClasses []ApiClass
 
-	// todo correctly parse complex cases like ActivityInstrumentationTestCase<T extends Activity>
 	c.OnHTML("tr[data-version-added]", func(e *colly.HTMLElement) {
 		index++
-		name := e.ChildText("td[class=jd-linkcol]>a[href]")
+		name := e.DOM.Find("td[class=jd-linkcol]>a[href]").First().Text()
+		nameWithGenerics := e.ChildText("td[class=jd-linkcol]")
 		link := e.ChildAttr("td[class=jd-linkcol]>a[href]", "href")
 		description := e.ChildText("td[class=jd-descrcol]")
 		description = regexp.MustCompile("\\s{2,}").ReplaceAllString(description, " ")
@@ -48,6 +49,7 @@ func main() {
 		apiClass := ApiClass{
 			Index:               index,
 			Name:                name,
+			NameWithGenerics:    nameWithGenerics,
 			Link:                link,
 			Description:         description,
 			AddedInVersion:      addedInVersion,
