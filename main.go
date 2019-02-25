@@ -16,7 +16,7 @@ import (
 type ApiClass struct {
 	Index               int    `json:"index"`
 	Name                string `json:"name"`
-	NameWithGenerics    string `json:"name_with_generics"`
+	NameExtended        string `json:"name_extended"`
 	Link                string `json:"link"`
 	Description         string `json:"description"`
 	AddedInVersion      int    `json:"added_in_version"`
@@ -31,7 +31,8 @@ func main() {
 
 	extensions.RandomUserAgent(c)
 
-	q, _ := queue.New(8, nil)
+	q, err := queue.New(8, nil)
+	check(err)
 
 	var index int
 	var apiClasses []ApiClass
@@ -39,7 +40,7 @@ func main() {
 	c.OnHTML("tr[data-version-added]", func(e *colly.HTMLElement) {
 		index++
 		name := e.DOM.Find("td[class=jd-linkcol]>a[href]").First().Text()
-		nameWithGenerics := e.ChildText("td[class=jd-linkcol]")
+		nameExtended := e.ChildText("td[class=jd-linkcol]")
 		link := e.ChildAttr("td[class=jd-linkcol]>a[href]", "href")
 		description := e.ChildText("td[class=jd-descrcol]")
 		description = regexp.MustCompile("\\s{2,}").ReplaceAllString(description, " ")
@@ -49,7 +50,7 @@ func main() {
 		apiClass := ApiClass{
 			Index:               index,
 			Name:                name,
-			NameWithGenerics:    nameWithGenerics,
+			NameExtended:        nameExtended,
 			Link:                link,
 			Description:         description,
 			AddedInVersion:      addedInVersion,
@@ -57,17 +58,28 @@ func main() {
 		}
 		apiClasses = append(apiClasses, apiClass)
 
-		//q.AddURL(link)
+		/*err := q.AddURL(link)
+		check(err)*/
 	})
 
-	/*c.OnHTML("a[class=__asdk_search_extension_link__]", func(e *colly.HTMLElement) {
-		log.Println("Source file link:", e.Attr("href"))
-	})*/
+	// a[class=__asdk_search_extension_link__]
 
-	q.AddURL("https://developer.android.com/reference/classes")
-	q.Run(c)
+	err = q.AddURL("https://developer.android.com/reference/classes")
+	check(err)
 
-	jsonData, _ := json.MarshalIndent(apiClasses, "", "    ")
-	ioutil.WriteFile("classes_index.json", jsonData, os.ModePerm)
+	err = q.Run(c)
+	check(err)
+
+	jsonData, err := json.MarshalIndent(apiClasses, "", "    ")
+	check(err)
+
+	err = ioutil.WriteFile("classes_index.json", jsonData, os.ModePerm)
+	check(err)
 	log.Println(string(jsonData))
+}
+
+func check(err error) {
+	if err != nil {
+		log.Fatal()
+	}
 }
