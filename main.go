@@ -16,6 +16,24 @@ type Library struct {
 	Link string
 }
 
+var libraries = [...]Library{
+	{"Android Platform", "/classes"},
+	{"Android Support Library", "/android/support/classes"},
+	{"AndroidX", "/androidx/classes"},
+	{"AndroidX Test", "/androidx/test/classes"},
+	{"Architecture Components", "/android/arch/classes"},
+	{"Android Automotive Library", "/android/car/classes"},
+	{"Databinding Library", "/android/databinding/classes"},
+	{"Constraint Layout Library", "/android/support/constraint/classes"},
+	{"Material Components", "/com/google/android/material/classes"},
+	{"Test Support Library", "/android/support/test/classes"},
+	{"Wearable Library", "/android/support/wearable/classes"},
+	{"Play Billing Library", "/com/android/billingclient/classes"},
+	{"Play Core Library", "/com/google/android/play/core/classes"},
+	{"Play Install Referrer Library", "/com/android/installreferrer/classes"},
+	{"Android Things", "/com/google/android/things/classes"},
+}
+
 type LibraryClasses struct {
 	Name    string     `json:"library_name"`
 	Classes []ApiClass `json:"classes"`
@@ -27,37 +45,16 @@ type ApiClass struct {
 	NameExtended        string `json:"name_extended"`
 	Link                string `json:"link"`
 	Description         string `json:"description"`
-	AddedInVersion      string `json:"added_in_version"`
-	DeprecatedInVersion string `json:"deprecated_in_version"`
+	AddedInVersion      string `json:"added_in_version,omitempty"`
+	DeprecatedInVersion string `json:"deprecated_in_version,omitempty"`
 }
 
 func main() {
-	c := colly.NewCollector(
-		colly.URLFilters(regexp.MustCompile("https://developer\\.android\\.com/reference/.+")),
-		colly.MaxDepth(1),
-	)
-
+	c := colly.NewCollector()
 	extensions.RandomUserAgent(c)
 
 	var id int
 	var libraryClasses []LibraryClasses
-	libraries := [...]Library{
-		{Name: "Android Platform", Link: "/classes"},
-		{Name: "Android Support Library", Link: "/android/support/classes"},
-		{Name: "AndroidX", Link: "/androidx/classes"},
-		{Name: "AndroidX Test", Link: "/androidx/test/classes"},
-		{Name: "Architecture Components", Link: "/android/arch/classes"},
-		{Name: "Android Automotive Library", Link: "/android/car/classes"},
-		{Name: "Databinding Library", Link: "/android/databinding/classes"},
-		{Name: "Constraint Layout Library", Link: "/android/support/constraint/classes"},
-		{Name: "Material Components", Link: "/com/google/android/material/classes"},
-		{Name: "Test Support Library", Link: "/android/support/test/classes"},
-		{Name: "Wearable Library", Link: "/android/support/wearable/classes"},
-		{Name: "Play Billing Library", Link: "/com/android/billingclient/classes"},
-		{Name: "Play Core Library", Link: "/com/google/android/play/core/classes"},
-		{Name: "Play Install Referrer Library", Link: "/com/android/installreferrer/classes"},
-		{Name: "Android Things", Link: "/com/google/android/things/classes"},
-	}
 
 	c.OnHTML("tr", func(e *colly.HTMLElement) {
 		id++
@@ -68,15 +65,16 @@ func main() {
 	for index := range libraries {
 		libraryClasses = append(libraryClasses, LibraryClasses{libraries[index].Name, []ApiClass{}})
 		// TODO visit links concurrently
-		err := c.Visit("https://developer.android.com/reference" + libraries[index].Link)
-		check(err)
+		link := "https://developer.android.com/reference" + libraries[index].Link
+		err := c.Visit(link)
+		check(err, "Can't visit link ", link)
 	}
 
 	jsonData, err := json.MarshalIndent(libraryClasses, "", "    ")
-	check(err)
+	check(err, "Can't marshal and indent libraryClasses")
 
 	err = ioutil.WriteFile("classes_index.json", jsonData, os.ModePerm)
-	check(err)
+	check(err, "Can't write json to file")
 	log.Println(string(jsonData))
 }
 
@@ -100,8 +98,8 @@ func parseApiClass(id int, e *colly.HTMLElement) ApiClass {
 	}
 }
 
-func check(err error) {
+func check(err error, message ...interface{}) {
 	if err != nil {
-		log.Println(err)
+		log.Println(message)
 	}
 }
