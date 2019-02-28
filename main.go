@@ -12,8 +12,8 @@ import (
 )
 
 type Library struct {
-	Name string
-	Link string
+	Name         string
+	RelativeLink string
 }
 
 var libraries = [...]Library{
@@ -65,7 +65,7 @@ func main() {
 	for index := range libraries {
 		libraryClasses = append(libraryClasses, LibraryClasses{libraries[index].Name, []ApiClass{}})
 		// TODO visit links concurrently
-		link := "https://developer.android.com/reference" + libraries[index].Link
+		link := "https://developer.android.com/reference" + libraries[index].RelativeLink
 		err := c.Visit(link)
 		check(err, "Can't visit link ", link)
 	}
