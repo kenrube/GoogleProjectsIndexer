@@ -42,7 +42,7 @@ type LibraryClasses struct {
 type ApiClass struct {
 	Id                  int    `json:"id"`
 	Name                string `json:"name"`
-	NameExtended        string `json:"name_extended"`
+	NameExtended        string `json:"name_extended,omitempty"`
 	Link                string `json:"link"`
 	Description         string `json:"description,omitempty"`
 	AddedInVersion      string `json:"added_in_version,omitempty"`
@@ -80,6 +80,9 @@ func main() {
 func parseApiClass(id int, e *colly.HTMLElement) ApiClass {
 	name := e.DOM.Find("td[class=jd-linkcol]>a[href]").First().Text()
 	nameExtended := e.ChildText("td[class=jd-linkcol]")
+	if nameExtended == name {
+		nameExtended = "" // to omit field in json
+	}
 	link := e.ChildAttr("td[class=jd-linkcol]>a[href]", "href")
 	description := e.ChildText("td[class=jd-descrcol]")
 	description = regexp.MustCompile("\\s{2,}").ReplaceAllString(description, " ")
