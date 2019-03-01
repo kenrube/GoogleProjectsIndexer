@@ -44,7 +44,7 @@ type ApiClass struct {
 	Name                string `json:"name"`
 	NameExtended        string `json:"name_extended"`
 	Link                string `json:"link"`
-	Description         string `json:"description"`
+	Description         string `json:"description,omitempty"`
 	AddedInVersion      string `json:"added_in_version,omitempty"`
 	DeprecatedInVersion string `json:"deprecated_in_version,omitempty"`
 }
@@ -64,7 +64,6 @@ func main() {
 
 	for index := range libraries {
 		libraryClasses = append(libraryClasses, LibraryClasses{libraries[index].Name, []ApiClass{}})
-		// TODO visit links concurrently
 		link := "https://developer.android.com/reference" + libraries[index].RelativeLink
 		err := c.Visit(link)
 		check(err, "Can't visit link ", link)
@@ -75,7 +74,7 @@ func main() {
 
 	err = ioutil.WriteFile("classes_index.json", jsonData, os.ModePerm)
 	check(err, "Can't write json to file")
-	log.Println(string(jsonData))
+	log.Println("Found", id, "classes in", len(libraries), "libraries")
 }
 
 func parseApiClass(id int, e *colly.HTMLElement) ApiClass {
