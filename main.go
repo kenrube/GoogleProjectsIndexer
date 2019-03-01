@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/csv"
 	"encoding/json"
 	"io/ioutil"
 	"log"
@@ -10,29 +11,6 @@ import (
 	"github.com/gocolly/colly"
 	"github.com/gocolly/colly/extensions"
 )
-
-type Library struct {
-	Name         string
-	RelativeLink string
-}
-
-var libraries = [...]Library{
-	{"Android Platform", "/classes"},
-	{"Android Support Library", "/android/support/classes"},
-	{"AndroidX", "/androidx/classes"},
-	{"AndroidX Test", "/androidx/test/classes"},
-	{"Architecture Components", "/android/arch/classes"},
-	{"Android Automotive Library", "/android/car/classes"},
-	{"Databinding Library", "/android/databinding/classes"},
-	{"Constraint Layout Library", "/android/support/constraint/classes"},
-	{"Material Components", "/com/google/android/material/classes"},
-	{"Test Support Library", "/android/support/test/classes"},
-	{"Wearable Library", "/android/support/wearable/classes"},
-	{"Play Billing Library", "/com/android/billingclient/classes"},
-	{"Play Core Library", "/com/google/android/play/core/classes"},
-	{"Play Install Referrer Library", "/com/android/installreferrer/classes"},
-	{"Android Things", "/com/google/android/things/classes"},
-}
 
 type LibraryClasses struct {
 	Name    string     `json:"library_name"`
@@ -49,6 +27,8 @@ type ApiClass struct {
 	DeprecatedInVersion string `json:"deprecated_in_version,omitempty"`
 }
 
+const baseDocLink string = "https://developer.android.com/reference"
+
 func main() {
 	c := colly.NewCollector()
 	extensions.RandomUserAgent(c)
@@ -62,11 +42,17 @@ func main() {
 			append(libraryClasses[len(libraryClasses)-1].Classes, parseApiClass(id, e))
 	})
 
+	librariesFile, err := os.Open("libraries.csv")
+	check(err, "Can't open libraries.csv")
+	r := csv.NewReader(librariesFile)
+	libraries, err := r.ReadAll()
+	check(err, "Can't read libraries.csv")
+
 	for index := range libraries {
-		libraryClasses = append(libraryClasses, LibraryClasses{libraries[index].Name, []ApiClass{}})
-		link := "https://developer.android.com/reference" + libraries[index].RelativeLink
+		libraryClasses = append(libraryClasses, LibraryClasses{libraries[index][0], []ApiClass{}})
+		link := baseDocLink + libraries[index][1]
 		err := c.Visit(link)
-		check(err, "Can't visit link ", link)
+		check(err, "Can't visit link", link)
 	}
 
 	jsonData, err := json.MarshalIndent(libraryClasses, "", "    ")
