@@ -12,13 +12,18 @@ import (
 	"github.com/gocolly/colly/extensions"
 )
 
+type AllClasses struct {
+	ClassCount int              `json:"class_count"`
+	Classes    []LibraryClasses `json:"classes"`
+}
+
 type LibraryClasses struct {
-	Name    string     `json:"library_name"`
-	Classes []ApiClass `json:"classes"`
+	Name       string     `json:"library_name"`
+	ClassCount int        `json:"class_count"`
+	Classes    []ApiClass `json:"classes"`
 }
 
 type ApiClass struct {
-	Id                  int    `json:"id"`
 	Name                string `json:"name"`
 	NameExtended        string `json:"name_extended,omitempty"`
 	Link                string `json:"link"`
@@ -33,13 +38,13 @@ func main() {
 	c := colly.NewCollector()
 	extensions.RandomUserAgent(c)
 
-	var id int
+	var allClasses AllClasses
 	var libraryClasses []LibraryClasses
 
 	c.OnHTML("tr", func(e *colly.HTMLElement) {
-		id++
+		libraryClasses[len(libraryClasses)-1].ClassCount += 1
 		libraryClasses[len(libraryClasses)-1].Classes =
-			append(libraryClasses[len(libraryClasses)-1].Classes, parseApiClass(id, e))
+			append(libraryClasses[len(libraryClasses)-1].Classes, parseApiClass(e))
 	})
 
 	librariesFile, err := os.Open("libraries.csv")
@@ -49,21 +54,25 @@ func main() {
 	check(err, "Can't read libraries.csv")
 
 	for index := range libraries {
-		libraryClasses = append(libraryClasses, LibraryClasses{libraries[index][0], []ApiClass{}})
+		libraryClasses = append(libraryClasses, LibraryClasses{libraries[index][0], 0, []ApiClass{}})
 		link := baseDocLink + libraries[index][1]
 		err := c.Visit(link)
 		check(err, "Can't visit link", link)
 	}
+	for index := range libraryClasses {
+		allClasses.ClassCount += libraryClasses[index].ClassCount
+	}
+	allClasses.Classes = libraryClasses
 
-	jsonData, err := json.MarshalIndent(libraryClasses, "", "    ")
-	check(err, "Can't marshal and indent libraryClasses")
+	jsonData, err := json.MarshalIndent(allClasses, "", "  ")
+	check(err, "Can't marshal and indent allClasses")
 
 	err = ioutil.WriteFile("classes_index.json", jsonData, os.ModePerm)
 	check(err, "Can't write json to file")
-	log.Println("Found", id, "classes in", len(libraries), "libraries")
+	log.Println("Found", allClasses.ClassCount, "classes in", len(libraries), "libraries")
 }
 
-func parseApiClass(id int, e *colly.HTMLElement) ApiClass {
+func parseApiClass(e *colly.HTMLElement) ApiClass {
 	name := e.DOM.Find("td[class=jd-linkcol]>a[href]").First().Text()
 	nameExtended := e.ChildText("td[class=jd-linkcol]")
 	if nameExtended == name {
@@ -76,7 +85,6 @@ func parseApiClass(id int, e *colly.HTMLElement) ApiClass {
 	deprecatedInVersion := e.Attr("data-version-deprecated")
 
 	return ApiClass{
-		Id:                  id,
 		Name:                name,
 		NameExtended:        nameExtended,
 		Link:                link,
