@@ -1,15 +1,15 @@
-"Android Platform","/classes"
-"Android Support Library","/android/support/classes"
-"AndroidX","/androidx/classes"
-"AndroidX Test","/androidx/test/classes"
-"Architecture Components","/android/arch/classes"
-"Android Automotive Library","/android/car/classes"
-"Databinding Library","/android/databinding/classes"
-"Constraint Layout Library","/android/support/constraint/classes"
-"Material Components","/com/google/android/material/classes"
-"Test Support Library","/android/support/test/classes"
-"Wearable Library","/android/support/wearable/classes"
-"Play Billing Library","/com/android/billingclient/classes"
-"Play Core Library","/com/google/android/play/core/classes"
-"Play Install Referrer Library","/com/android/installreferrer/classes"
-"Android Things","/com/google/android/things/classes"
+Android Platform,/classes
+Android Support Library,/android/support/classes
+AndroidX,/androidx/classes
+AndroidX Test,/androidx/test/classes
+Architecture Components,/android/arch/classes
+Android Automotive Library,/android/car/classes
+Databinding Library,/android/databinding/classes
+Constraint Layout Library,/android/support/constraint/classes
+Material Components,/com/google/android/material/classes
+Test Support Library,/android/support/test/classes
+Wearable Library,/android/support/wearable/classes
+Play Billing Library,/com/android/billingclient/classes
+Play Core Library,/com/google/android/play/core/classes
+Play Install Referrer Library,/com/android/installreferrer/classes
+Android Things,/com/google/android/things/classes

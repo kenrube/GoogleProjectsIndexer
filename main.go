@@ -7,6 +7,7 @@ import (
 	"log"
 	"os"
 	"regexp"
+	"strings"
 
 	"github.com/gocolly/colly"
 	"github.com/gocolly/colly/extensions"
@@ -27,12 +28,16 @@ type ApiClass struct {
 	Name                string `json:"name"`
 	NameExtended        string `json:"name_extended,omitempty"`
 	Link                string `json:"link"`
+	SourceLink          string `json:"source_link,omitempty"`
 	Description         string `json:"description,omitempty"`
 	AddedInVersion      string `json:"added_in_version,omitempty"`
 	DeprecatedInVersion string `json:"deprecated_in_version,omitempty"`
 }
 
 const baseDocLink string = "https://developer.android.com/reference"
+const baseSourceCodeLink string = "https://android.googlesource.com"
+
+var sourceMappings [][]string
 
 func main() {
 	c := colly.NewCollector()
@@ -47,28 +52,27 @@ func main() {
 			append(libraryClasses[len(libraryClasses)-1].Classes, parseApiClass(e))
 	})
 
-	librariesFile, err := os.Open("libraries.csv")
-	check(err, "Can't open libraries.csv")
+	librariesFile, _ := os.Open("libraries.csv")
 	r := csv.NewReader(librariesFile)
-	libraries, err := r.ReadAll()
-	check(err, "Can't read libraries.csv")
+	libraries, _ := r.ReadAll()
 
-	for index := range libraries {
-		libraryClasses = append(libraryClasses, LibraryClasses{libraries[index][0], 0, []ApiClass{}})
-		link := baseDocLink + libraries[index][1]
-		err := c.Visit(link)
-		check(err, "Can't visit link", link)
+	sourceMappingsFile, _ := os.Open("source_mapping.csv")
+	r = csv.NewReader(sourceMappingsFile)
+	sourceMappings, _ = r.ReadAll()
+
+	for _, library := range libraries {
+		libraryClasses = append(libraryClasses, LibraryClasses{library[0], 0, []ApiClass{}})
+		link := baseDocLink + library[1]
+		_ = c.Visit(link)
 	}
-	for index := range libraryClasses {
-		allClasses.ClassCount += libraryClasses[index].ClassCount
+	for _, libraryClass := range libraryClasses {
+		allClasses.ClassCount += libraryClass.ClassCount
 	}
 	allClasses.Classes = libraryClasses
 
-	jsonData, err := json.MarshalIndent(allClasses, "", "  ")
-	check(err, "Can't marshal and indent allClasses")
+	jsonData, _ := json.MarshalIndent(allClasses, "", "  ")
 
-	err = ioutil.WriteFile("classes_index.json", jsonData, os.ModePerm)
-	check(err, "Can't write json to file")
+	_ = ioutil.WriteFile("classes_index.json", jsonData, os.ModePerm)
 	log.Println("Found", allClasses.ClassCount, "classes in", len(libraries), "libraries")
 }
 
@@ -79,6 +83,14 @@ func parseApiClass(e *colly.HTMLElement) ApiClass {
 		nameExtended = "" // to omit field in json
 	}
 	link := e.ChildAttr("td[class=jd-linkcol]>a[href]", "href")
+	sourceLink := ""
+	for _, mapping := range sourceMappings {
+		if strings.HasPrefix(link, baseDocLink+mapping[0]) {
+			classDocTitle := link[len(baseDocLink+mapping[0]):]
+			title := classDocTitle[:strings.Index(classDocTitle, ".")]
+			sourceLink = baseSourceCodeLink + mapping[1] + title + ".java"
+		}
+	}
 	description := e.ChildText("td[class=jd-descrcol]")
 	description = regexp.MustCompile("\\s{2,}").ReplaceAllString(description, " ")
 	addedInVersion := e.Attr("data-version-added")
@@ -88,14 +100,9 @@ func parseApiClass(e *colly.HTMLElement) ApiClass {
 		Name:                name,
 		NameExtended:        nameExtended,
 		Link:                link,
+		SourceLink:          sourceLink,
 		Description:         description,
 		AddedInVersion:      addedInVersion,
 		DeprecatedInVersion: deprecatedInVersion,
-	}
-}
-
-func check(err error, message ...interface{}) {
-	if err != nil {
-		log.Println(message)
 	}
 }
