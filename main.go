@@ -37,6 +37,7 @@ type ApiClass struct {
 const baseDocLink string = "https://developer.android.com/reference"
 const baseSourceCodeLink string = "https://android.googlesource.com"
 
+var whitespaceRegexp = regexp.MustCompile("\\s{2,}")
 var sourceMappings [][]string
 
 func main() {
@@ -88,11 +89,14 @@ func parseApiClass(e *colly.HTMLElement) ApiClass {
 		if strings.HasPrefix(link, baseDocLink+mapping[0]) {
 			classDocTitle := link[len(baseDocLink+mapping[0]):]
 			title := classDocTitle[:strings.Index(classDocTitle, ".")]
+			if strings.HasSuffix(title, "R") { // exclude auto-generated R classes
+				break
+			}
 			sourceLink = baseSourceCodeLink + mapping[1] + title + ".java"
 		}
 	}
 	description := e.ChildText("td[class=jd-descrcol]")
-	description = regexp.MustCompile("\\s{2,}").ReplaceAllString(description, " ")
+	description = whitespaceRegexp.ReplaceAllString(description, " ")
 	addedInVersion := e.Attr("data-version-added")
 	deprecatedInVersion := e.Attr("data-version-deprecated")
 
