@@ -52502,6 +52502,7 @@
         {
           "name": "AndroidViewModel",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/AndroidViewModel.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/viewmodel/src/main/java/androidx/lifecycle/AndroidViewModel.java",
           "description": "Application context aware ViewModel.",
           "added_in_version": "1.0.0"
         },
@@ -52509,41 +52510,49 @@
           "name": "AsyncPagedListDiffer",
           "name_extended": "AsyncPagedListDiffer\u003cT\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/AsyncPagedListDiffer.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/AsyncPagedListDiffer.java",
           "description": "Helper object for mapping a PagedList into a RecyclerView.Adapter."
         },
         {
           "name": "ColumnInfo",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/ColumnInfo.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/ColumnInfo.java",
           "description": "Allows specific customization about the column associated with this field."
         },
         {
           "name": "ColumnInfo.Collate",
-          "link": "https://developer.android.com/reference/android/arch/persistence/room/ColumnInfo.Collate.html"
+          "link": "https://developer.android.com/reference/android/arch/persistence/room/ColumnInfo.Collate.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/ColumnInfo.java"
         },
         {
           "name": "ColumnInfo.SQLiteTypeAffinity",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/ColumnInfo.SQLiteTypeAffinity.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/ColumnInfo.java",
           "description": "The SQLite column type constants that can be used in typeAffinity()"
         },
         {
           "name": "CountingTaskExecutorRule",
           "link": "https://developer.android.com/reference/android/arch/core/executor/testing/CountingTaskExecutorRule.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/arch/core-testing/src/main/java/androidx/arch/core/executor/testing/CountingTaskExecutorRule.java",
           "description": "A JUnit Test Rule that swaps the background executor used by the Architecture Components with a different one which counts the tasks as they are start and finish.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "Dao",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/Dao.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/Dao.java",
           "description": "Marks the class as a Data Access Object."
         },
         {
           "name": "Database",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/Database.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/Database.java",
           "description": "Marks a class as a RoomDatabase."
         },
         {
           "name": "DatabaseConfiguration",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/DatabaseConfiguration.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/DatabaseConfiguration.java",
           "description": "Configuration class for a RoomDatabase.",
           "added_in_version": "1.1.0"
         },
@@ -52551,58 +52560,69 @@
           "name": "DataSource",
           "name_extended": "DataSource\u003cKey, Value\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/DataSource.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/DataSource.java",
           "description": "Base class for loading pages of snapshot data into a PagedList."
         },
         {
           "name": "DataSource.Factory",
           "name_extended": "DataSource.Factory\u003cKey, Value\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/DataSource.Factory.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/DataSource.java",
           "description": "Factory for DataSources."
         },
         {
           "name": "DataSource.InvalidatedCallback",
           "link": "https://developer.android.com/reference/android/arch/paging/DataSource.InvalidatedCallback.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/DataSource.java",
           "description": "Invalidation callback for DataSource."
         },
         {
           "name": "DefaultLifecycleObserver",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/DefaultLifecycleObserver.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/common-java8/src/main/java/androidx/lifecycle/DefaultLifecycleObserver.java",
           "description": "Callback interface for listening to LifecycleOwner state changes."
         },
         {
           "name": "Delete",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/Delete.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/Delete.java",
           "description": "Marks a method in a Dao annotated class as a delete method."
         },
         {
           "name": "Embedded",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/Embedded.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/Embedded.java",
           "description": "Can be used as an annotation on a field of an Entity or Pojo to signal that nested fields (i.e."
         },
         {
           "name": "EmptyResultSetException",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/EmptyResultSetException.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/EmptyResultSetException.java",
           "description": "Thrown by Room when the query needs to return a result (e.g.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "Entity",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/Entity.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/Entity.java",
           "description": "Marks a class as an entity."
         },
         {
           "name": "ForeignKey",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/ForeignKey.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/ForeignKey.java",
           "description": "Declares a foreign key on another Entity."
         },
         {
           "name": "ForeignKey.Action",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/ForeignKey.Action.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/ForeignKey.java",
           "description": "Constants definition for values that can be used in onDelete() and onUpdate()."
         },
         {
           "name": "FrameworkSQLiteOpenHelperFactory",
           "link": "https://developer.android.com/reference/android/arch/persistence/db/framework/FrameworkSQLiteOpenHelperFactory.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/persistence/db-framework/src/main/java/androidx/sqlite/db/framework/FrameworkSQLiteOpenHelperFactory.java",
           "description": "Implements SupportSQLiteOpenHelper.Factory using the SQLite implementation in the framework.",
           "added_in_version": "1.1.0"
         },
@@ -52610,39 +52630,46 @@
           "name": "Function",
           "name_extended": "Function\u003cI, O\u003e",
           "link": "https://developer.android.com/reference/android/arch/core/util/Function.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/arch/core-common/src/main/java/androidx/arch/core/util/Function.java",
           "description": "Represents a function.",
           "added_in_version": "1.0.0"
         },
         {
           "name": "Ignore",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/Ignore.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/Ignore.java",
           "description": "Ignores the marked element from Room's processing logic."
         },
         {
           "name": "Index",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/Index.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/Index.java",
           "description": "Declares an index on an Entity."
         },
         {
           "name": "Insert",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/Insert.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/Insert.java",
           "description": "Marks a method in a Dao annotated class as an insert method."
         },
         {
           "name": "InstantTaskExecutorRule",
           "link": "https://developer.android.com/reference/android/arch/core/executor/testing/InstantTaskExecutorRule.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/arch/core-testing/src/main/java/androidx/arch/core/executor/testing/InstantTaskExecutorRule.java",
           "description": "A JUnit Test Rule that swaps the background executor used by the Architecture Components with a different one which executes each task synchronously.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "InvalidationTracker",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/InvalidationTracker.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/InvalidationTracker.java",
           "description": "InvalidationTracker keeps a list of tables modified by queries and notifies its callbacks about these tables.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "InvalidationTracker.Observer",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/InvalidationTracker.Observer.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/InvalidationTracker.java",
           "description": "An observer that can listen for changes in the database.",
           "added_in_version": "1.1.0"
         },
@@ -52650,65 +52677,77 @@
           "name": "ItemKeyedDataSource",
           "name_extended": "ItemKeyedDataSource\u003cKey, Value\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/ItemKeyedDataSource.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/ItemKeyedDataSource.java",
           "description": "Incremental data loader for paging keyed content, where loaded content uses previously loaded items as input to future loads."
         },
         {
           "name": "ItemKeyedDataSource.LoadCallback",
           "name_extended": "ItemKeyedDataSource.LoadCallback\u003cValue\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/ItemKeyedDataSource.LoadCallback.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/ItemKeyedDataSource.java",
           "description": "Callback for ItemKeyedDataSource loadBefore(LoadParams, LoadCallback) and loadAfter(LoadParams, LoadCallback) to return data."
         },
         {
           "name": "ItemKeyedDataSource.LoadInitialCallback",
           "name_extended": "ItemKeyedDataSource.LoadInitialCallback\u003cValue\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/ItemKeyedDataSource.LoadInitialCallback.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/ItemKeyedDataSource.java",
           "description": "Callback for loadInitial(LoadInitialParams, LoadInitialCallback) to return data and, optionally, position/count information."
         },
         {
           "name": "ItemKeyedDataSource.LoadInitialParams",
           "name_extended": "ItemKeyedDataSource.LoadInitialParams\u003cKey\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/ItemKeyedDataSource.LoadInitialParams.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/ItemKeyedDataSource.java",
           "description": "Holder object for inputs to loadInitial(LoadInitialParams, LoadInitialCallback)."
         },
         {
           "name": "ItemKeyedDataSource.LoadParams",
           "name_extended": "ItemKeyedDataSource.LoadParams\u003cKey\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/ItemKeyedDataSource.LoadParams.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/ItemKeyedDataSource.java",
           "description": "Holder object for inputs to loadBefore(LoadParams, LoadCallback) and loadAfter(LoadParams, LoadCallback)."
         },
         {
           "name": "Lifecycle",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/Lifecycle.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/common/src/main/java/androidx/lifecycle/Lifecycle.java",
           "description": "Defines an object that has an Android Lifecycle."
         },
         {
           "name": "Lifecycle.Event",
-          "link": "https://developer.android.com/reference/android/arch/lifecycle/Lifecycle.Event.html"
+          "link": "https://developer.android.com/reference/android/arch/lifecycle/Lifecycle.Event.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/common/src/main/java/androidx/lifecycle/Lifecycle.java"
         },
         {
           "name": "Lifecycle.State",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/Lifecycle.State.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/common/src/main/java/androidx/lifecycle/Lifecycle.java",
           "description": "Lifecycle states."
         },
         {
           "name": "LifecycleObserver",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/LifecycleObserver.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/common/src/main/java/androidx/lifecycle/LifecycleObserver.java",
           "description": "Marks a class as a LifecycleObserver."
         },
         {
           "name": "LifecycleOwner",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/LifecycleOwner.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/common/src/main/java/androidx/lifecycle/LifecycleOwner.java",
           "description": "A class that has an Android lifecycle."
         },
         {
           "name": "LifecycleRegistry",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/LifecycleRegistry.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/runtime/src/main/java/androidx/lifecycle/LifecycleRegistry.java",
           "description": "An implementation of Lifecycle that can handle multiple observers.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "LifecycleRegistryOwner",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/LifecycleRegistryOwner.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/runtime/src/main/java/androidx/lifecycle/LifecycleRegistryOwner.java",
           "description": "This interface was deprecated in API level 1.1.0. Use android.support.v7.app.AppCompatActivity which extends LifecycleOwner, so there are no use cases for this class.",
           "added_in_version": "1.1.0",
           "deprecated_in_version": "1.1.0"
@@ -52716,6 +52755,7 @@
         {
           "name": "LifecycleService",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/LifecycleService.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/service/src/main/java/androidx/lifecycle/LifecycleService.java",
           "description": "A Service that is also a LifecycleOwner.",
           "added_in_version": "1.1.0"
         },
@@ -52723,12 +52763,14 @@
           "name": "LiveData",
           "name_extended": "LiveData\u003cT\u003e",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/LiveData.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/livedata-core/src/main/java/androidx/lifecycle/LiveData.java",
           "description": "LiveData is a data holder class that can be observed within a given lifecycle.",
           "added_in_version": "1.0.0"
         },
         {
           "name": "LiveDataReactiveStreams",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/LiveDataReactiveStreams.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/reactivestreams/src/main/java/androidx/lifecycle/LiveDataReactiveStreams.java",
           "description": "Adapts LiveData input and output to the ReactiveStreams spec.",
           "added_in_version": "1.1.0"
         },
@@ -52736,24 +52778,28 @@
           "name": "LivePagedListBuilder",
           "name_extended": "LivePagedListBuilder\u003cKey, Value\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/LivePagedListBuilder.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/LivePagedListBuilder.java",
           "description": "Builder for LiveData\u003cPagedList\u003e, given a DataSource.Factory and a PagedList.Config."
         },
         {
           "name": "MediatorLiveData",
           "name_extended": "MediatorLiveData\u003cT\u003e",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/MediatorLiveData.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/livedata/src/main/java/androidx/lifecycle/MediatorLiveData.java",
           "description": "LiveData subclass which may observe other LiveData objects and react on OnChanged events from them.",
           "added_in_version": "1.0.0"
         },
         {
           "name": "Migration",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/migration/Migration.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/migration/Migration.java",
           "description": "Base class for a database migration.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "MigrationTestHelper",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/testing/MigrationTestHelper.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/testing/MigrationTestHelper.java",
           "description": "A class that can be used in your Instrumentation tests that can create the database in an older schema.",
           "added_in_version": "1.1.0"
         },
@@ -52761,6 +52807,7 @@
           "name": "MutableLiveData",
           "name_extended": "MutableLiveData\u003cT\u003e",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/MutableLiveData.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/livedata-core/src/main/java/androidx/lifecycle/MutableLiveData.java",
           "description": "LiveData which publicly exposes setValue(T) and postValue(T) method.",
           "added_in_version": "1.0.0"
         },
@@ -52768,150 +52815,177 @@
           "name": "Observer",
           "name_extended": "Observer\u003cT\u003e",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/Observer.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/livedata-core/src/main/java/androidx/lifecycle/Observer.java",
           "description": "A simple callback that can receive from LiveData.",
           "added_in_version": "1.0.0"
         },
         {
           "name": "OnConflictStrategy",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/OnConflictStrategy.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/OnConflictStrategy.java",
           "description": "Set of conflict handling strategies for various Dao methods."
         },
         {
           "name": "OnLifecycleEvent",
-          "link": "https://developer.android.com/reference/android/arch/lifecycle/OnLifecycleEvent.html"
+          "link": "https://developer.android.com/reference/android/arch/lifecycle/OnLifecycleEvent.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/common/src/main/java/androidx/lifecycle/OnLifecycleEvent.java"
         },
         {
           "name": "PagedList",
           "name_extended": "PagedList\u003cT\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/PagedList.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/PagedList.java",
           "description": "Lazy loading list that pages in immutable content from a DataSource."
         },
         {
           "name": "PagedList.BoundaryCallback",
           "name_extended": "PagedList.BoundaryCallback\u003cT\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/PagedList.BoundaryCallback.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/PagedList.java",
           "description": "Signals when a PagedList has reached the end of available data."
         },
         {
           "name": "PagedList.Builder",
           "name_extended": "PagedList.Builder\u003cKey, Value\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/PagedList.Builder.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/PagedList.java",
           "description": "Builder class for PagedList."
         },
         {
           "name": "PagedList.Callback",
           "link": "https://developer.android.com/reference/android/arch/paging/PagedList.Callback.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/PagedList.java",
           "description": "Callback signaling when content is loaded into the list."
         },
         {
           "name": "PagedList.Config",
           "link": "https://developer.android.com/reference/android/arch/paging/PagedList.Config.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/PagedList.java",
           "description": "Configures how a PagedList loads content from its DataSource."
         },
         {
           "name": "PagedList.Config.Builder",
           "link": "https://developer.android.com/reference/android/arch/paging/PagedList.Config.Builder.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/PagedList.java",
           "description": "Builder class for PagedList.Config."
         },
         {
           "name": "PagedListAdapter",
           "name_extended": "PagedListAdapter\u003cT, VH extends RecyclerView.ViewHolder\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/PagedListAdapter.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/PagedListAdapter.java",
           "description": "RecyclerView.Adapter base class for presenting paged data from PagedLists in a RecyclerView."
         },
         {
           "name": "PageKeyedDataSource",
           "name_extended": "PageKeyedDataSource\u003cKey, Value\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/PageKeyedDataSource.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/PageKeyedDataSource.java",
           "description": "Incremental data loader for page-keyed content, where requests return keys for next/previous pages."
         },
         {
           "name": "PageKeyedDataSource.LoadCallback",
           "name_extended": "PageKeyedDataSource.LoadCallback\u003cKey, Value\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/PageKeyedDataSource.LoadCallback.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/PageKeyedDataSource.java",
           "description": "Callback for PageKeyedDataSource loadBefore(LoadParams, LoadCallback) and loadAfter(LoadParams, LoadCallback) to return data."
         },
         {
           "name": "PageKeyedDataSource.LoadInitialCallback",
           "name_extended": "PageKeyedDataSource.LoadInitialCallback\u003cKey, Value\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/PageKeyedDataSource.LoadInitialCallback.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/PageKeyedDataSource.java",
           "description": "Callback for loadInitial(LoadInitialParams, LoadInitialCallback) to return data and, optionally, position/count information."
         },
         {
           "name": "PageKeyedDataSource.LoadInitialParams",
           "name_extended": "PageKeyedDataSource.LoadInitialParams\u003cKey\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/PageKeyedDataSource.LoadInitialParams.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/PageKeyedDataSource.java",
           "description": "Holder object for inputs to loadInitial(LoadInitialParams, LoadInitialCallback)."
         },
         {
           "name": "PageKeyedDataSource.LoadParams",
           "name_extended": "PageKeyedDataSource.LoadParams\u003cKey\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/PageKeyedDataSource.LoadParams.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/PageKeyedDataSource.java",
           "description": "Holder object for inputs to loadBefore(LoadParams, LoadCallback) and loadAfter(LoadParams, LoadCallback)."
         },
         {
           "name": "PositionalDataSource",
           "name_extended": "PositionalDataSource\u003cT\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/PositionalDataSource.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/PositionalDataSource.java",
           "description": "Position-based data loader for a fixed-size, countable data set, supporting fixed-size loads at arbitrary page positions."
         },
         {
           "name": "PositionalDataSource.LoadInitialCallback",
           "name_extended": "PositionalDataSource.LoadInitialCallback\u003cT\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/PositionalDataSource.LoadInitialCallback.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/PositionalDataSource.java",
           "description": "Callback for loadInitial(LoadInitialParams, LoadInitialCallback) to return data, position, and count."
         },
         {
           "name": "PositionalDataSource.LoadInitialParams",
           "link": "https://developer.android.com/reference/android/arch/paging/PositionalDataSource.LoadInitialParams.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/PositionalDataSource.java",
           "description": "Holder object for inputs to loadInitial(LoadInitialParams, LoadInitialCallback)."
         },
         {
           "name": "PositionalDataSource.LoadRangeCallback",
           "name_extended": "PositionalDataSource.LoadRangeCallback\u003cT\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/PositionalDataSource.LoadRangeCallback.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/PositionalDataSource.java",
           "description": "Callback for PositionalDataSource loadRange(LoadRangeParams, LoadRangeCallback) to return data."
         },
         {
           "name": "PositionalDataSource.LoadRangeParams",
           "link": "https://developer.android.com/reference/android/arch/paging/PositionalDataSource.LoadRangeParams.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/PositionalDataSource.java",
           "description": "Holder object for inputs to loadRange(LoadRangeParams, LoadRangeCallback)."
         },
         {
           "name": "PrimaryKey",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/PrimaryKey.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/PrimaryKey.java",
           "description": "Marks a field in an Entity as the primary key."
         },
         {
           "name": "ProcessLifecycleOwner",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/ProcessLifecycleOwner.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/process/src/main/java/androidx/lifecycle/ProcessLifecycleOwner.java",
           "description": "Class that provides lifecycle for the whole application process.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "Query",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/Query.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/Query.java",
           "description": "Marks a method in a Dao annotated class as a query method."
         },
         {
           "name": "RawQuery",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/RawQuery.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/RawQuery.java",
           "description": "Marks a method in a Dao annotated class as a raw query method where you can pass the query as a SupportSQLiteQuery."
         },
         {
           "name": "Relation",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/Relation.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/Relation.java",
           "description": "A convenience annotation which can be used in a Pojo to automatically fetch relation entities."
         },
         {
           "name": "Room",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/Room.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/Room.java",
           "description": "Utility class for Room.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "RoomDatabase",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/RoomDatabase.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/RoomDatabase.java",
           "description": "Base class for all Room databases.",
           "added_in_version": "1.1.0"
         },
@@ -52919,186 +52993,218 @@
           "name": "RoomDatabase.Builder",
           "name_extended": "RoomDatabase.Builder\u003cT extends RoomDatabase\u003e",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/RoomDatabase.Builder.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/RoomDatabase.java",
           "description": "Builder for RoomDatabase.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "RoomDatabase.Callback",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/RoomDatabase.Callback.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/RoomDatabase.java",
           "description": "Callback for RoomDatabase.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "RoomDatabase.JournalMode",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/RoomDatabase.JournalMode.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/RoomDatabase.java",
           "description": "Journal modes for SQLite database.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "RoomDatabase.MigrationContainer",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/RoomDatabase.MigrationContainer.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/RoomDatabase.java",
           "description": "A container to hold migrations.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "RoomWarnings",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/RoomWarnings.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/RoomWarnings.java",
           "description": "The list of warnings that are produced by Room."
         },
         {
           "name": "RxPagedListBuilder",
           "name_extended": "RxPagedListBuilder\u003cKey, Value\u003e",
           "link": "https://developer.android.com/reference/android/arch/paging/RxPagedListBuilder.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/paging/runtime/src/main/java/androidx/paging/RxPagedListBuilder.java",
           "description": "Builder for Observable\u003cPagedList\u003e or Flowable\u003cPagedList\u003e, given a DataSource.Factory and a PagedList.Config."
         },
         {
           "name": "RxRoom",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/RxRoom.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/RxRoom.java",
           "description": "Helper class to add RxJava2 support to Room.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "ServiceLifecycleDispatcher",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/ServiceLifecycleDispatcher.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/service/src/main/java/androidx/lifecycle/ServiceLifecycleDispatcher.java",
           "description": "Helper class to dispatch lifecycle events for a service.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "SimpleSQLiteQuery",
           "link": "https://developer.android.com/reference/android/arch/persistence/db/SimpleSQLiteQuery.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/persistence/db/src/main/java/androidx/sqlite/db/SimpleSQLiteQuery.java",
           "description": "A basic implementation of SupportSQLiteQuery which receives a query and its args and binds args based on the passed in Object type.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "SkipQueryVerification",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/SkipQueryVerification.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/SkipQueryVerification.java",
           "description": "Skips database verification for the annotated element."
         },
         {
           "name": "SupportSQLiteDatabase",
           "link": "https://developer.android.com/reference/android/arch/persistence/db/SupportSQLiteDatabase.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/persistence/db/src/main/java/androidx/sqlite/db/SupportSQLiteDatabase.java",
           "description": "A database abstraction which removes the framework dependency and allows swapping underlying sql versions.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "SupportSQLiteOpenHelper",
           "link": "https://developer.android.com/reference/android/arch/persistence/db/SupportSQLiteOpenHelper.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/persistence/db/src/main/java/androidx/sqlite/db/SupportSQLiteOpenHelper.java",
           "description": "An interface to map the behavior of SQLiteOpenHelper.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "SupportSQLiteOpenHelper.Callback",
           "link": "https://developer.android.com/reference/android/arch/persistence/db/SupportSQLiteOpenHelper.Callback.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/persistence/db/src/main/java/androidx/sqlite/db/SupportSQLiteOpenHelper.java",
           "description": "Handles various lifecycle events for the SQLite connection, similar to SQLiteOpenHelper.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "SupportSQLiteOpenHelper.Configuration",
           "link": "https://developer.android.com/reference/android/arch/persistence/db/SupportSQLiteOpenHelper.Configuration.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/persistence/db/src/main/java/androidx/sqlite/db/SupportSQLiteOpenHelper.java",
           "description": "The configuration to create an SQLite open helper object using SupportSQLiteOpenHelper.Factory.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "SupportSQLiteOpenHelper.Configuration.Builder",
           "link": "https://developer.android.com/reference/android/arch/persistence/db/SupportSQLiteOpenHelper.Configuration.Builder.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/persistence/db/src/main/java/androidx/sqlite/db/SupportSQLiteOpenHelper.java",
           "description": "Builder class for SupportSQLiteOpenHelper.Configuration.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "SupportSQLiteOpenHelper.Factory",
           "link": "https://developer.android.com/reference/android/arch/persistence/db/SupportSQLiteOpenHelper.Factory.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/persistence/db/src/main/java/androidx/sqlite/db/SupportSQLiteOpenHelper.java",
           "description": "Factory class to create instances of SupportSQLiteOpenHelper using SupportSQLiteOpenHelper.Configuration.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "SupportSQLiteProgram",
           "link": "https://developer.android.com/reference/android/arch/persistence/db/SupportSQLiteProgram.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/persistence/db/src/main/java/androidx/sqlite/db/SupportSQLiteProgram.java",
           "description": "An interface to map the behavior of SQLiteProgram.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "SupportSQLiteQuery",
           "link": "https://developer.android.com/reference/android/arch/persistence/db/SupportSQLiteQuery.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/persistence/db/src/main/java/androidx/sqlite/db/SupportSQLiteQuery.java",
           "description": "A query with typed bindings.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "SupportSQLiteQueryBuilder",
           "link": "https://developer.android.com/reference/android/arch/persistence/db/SupportSQLiteQueryBuilder.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/persistence/db/src/main/java/androidx/sqlite/db/SupportSQLiteQueryBuilder.java",
           "description": "A simple query builder to create SQL SELECT queries.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "SupportSQLiteStatement",
           "link": "https://developer.android.com/reference/android/arch/persistence/db/SupportSQLiteStatement.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/persistence/db/src/main/java/androidx/sqlite/db/SupportSQLiteStatement.java",
           "description": "An interface to map the behavior of SQLiteStatement.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "Transaction",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/Transaction.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/Transaction.java",
           "description": "Marks a method in a Dao class as a transaction method."
         },
         {
           "name": "Transformations",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/Transformations.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/livedata/src/main/java/androidx/lifecycle/Transformations.java",
           "description": "Transformations for a LiveData class.",
           "added_in_version": "1.0.0"
         },
         {
           "name": "TypeConverter",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/TypeConverter.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/TypeConverter.java",
           "description": "Marks a method as a type converter."
         },
         {
           "name": "TypeConverters",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/TypeConverters.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/TypeConverters.java",
           "description": "Specifies additional type converters that Room can use."
         },
         {
           "name": "Update",
           "link": "https://developer.android.com/reference/android/arch/persistence/room/Update.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/Update.java",
           "description": "Marks a method in a Dao annotated class as an update method."
         },
         {
           "name": "ViewModel",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/ViewModel.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/viewmodel/src/main/java/androidx/lifecycle/ViewModel.java",
           "description": "ViewModel is a class that is responsible for preparing and managing the data for an Activity or a Fragment.",
           "added_in_version": "1.0.0"
         },
         {
           "name": "ViewModelProvider",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/ViewModelProvider.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/viewmodel/src/main/java/androidx/lifecycle/ViewModelProvider.java",
           "description": "An utility class that provides ViewModels for a scope.",
           "added_in_version": "1.0.0"
         },
         {
           "name": "ViewModelProvider.AndroidViewModelFactory",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/ViewModelProvider.AndroidViewModelFactory.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/viewmodel/src/main/java/androidx/lifecycle/ViewModelProvider.java",
           "description": "ViewModelProvider.Factory which may create AndroidViewModel and ViewModel, which have an empty constructor.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "ViewModelProvider.Factory",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/ViewModelProvider.Factory.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/viewmodel/src/main/java/androidx/lifecycle/ViewModelProvider.java",
           "description": "Implementations of Factory interface are responsible to instantiate ViewModels.",
           "added_in_version": "1.0.0"
         },
         {
           "name": "ViewModelProvider.NewInstanceFactory",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/ViewModelProvider.NewInstanceFactory.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/viewmodel/src/main/java/androidx/lifecycle/ViewModelProvider.java",
           "description": "Simple factory, which calls empty constructor on the give class.",
           "added_in_version": "1.0.0"
         },
         {
           "name": "ViewModelProviders",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/ViewModelProviders.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/extensions/src/main/java/androidx/lifecycle/ViewModelProviders.java",
           "description": "Utilities methods for ViewModelStore class.",
           "added_in_version": "1.1.0"
         },
         {
           "name": "ViewModelProviders.DefaultFactory",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/ViewModelProviders.DefaultFactory.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/extensions/src/main/java/androidx/lifecycle/ViewModelProviders.java",
           "description": "This class was deprecated in API level 1.1.0. Use ViewModelProvider.AndroidViewModelFactory",
           "added_in_version": "1.1.0",
           "deprecated_in_version": "1.1.0"
@@ -53106,18 +53212,21 @@
         {
           "name": "ViewModelStore",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/ViewModelStore.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/viewmodel/src/main/java/androidx/lifecycle/ViewModelStore.java",
           "description": "Class to store ViewModels.",
           "added_in_version": "1.0.0"
         },
         {
           "name": "ViewModelStoreOwner",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/ViewModelStoreOwner.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/viewmodel/src/main/java/androidx/lifecycle/ViewModelStoreOwner.java",
           "description": "A scope that owns ViewModelStore.",
           "added_in_version": "1.0.0"
         },
         {
           "name": "ViewModelStores",
           "link": "https://developer.android.com/reference/android/arch/lifecycle/ViewModelStores.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/support/+/androidx-master-release/lifecycle/extensions/src/main/java/androidx/lifecycle/ViewModelStores.java",
           "description": "Factory methods for ViewModelStore class.",
           "added_in_version": "1.1.0"
         }
