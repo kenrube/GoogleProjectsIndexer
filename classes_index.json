@@ -53239,160 +53239,193 @@
         {
           "name": "Car",
           "link": "https://developer.android.com/reference/android/car/Car.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/Car.java",
           "description": "Top level car API for embedded Android Auto deployments."
         },
         {
           "name": "CarAppFocusManager",
           "link": "https://developer.android.com/reference/android/car/CarAppFocusManager.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/CarAppFocusManager.java",
           "description": "CarAppFocusManager allows applications to set and listen for the current application focus like active navigation or active voice command."
         },
         {
           "name": "CarAppFocusManager.OnAppFocusChangedListener",
           "link": "https://developer.android.com/reference/android/car/CarAppFocusManager.OnAppFocusChangedListener.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/CarAppFocusManager.java",
           "description": "Listener to get notification for app getting information on application type status changes."
         },
         {
           "name": "CarAppFocusManager.OnAppFocusOwnershipCallback",
           "link": "https://developer.android.com/reference/android/car/CarAppFocusManager.OnAppFocusOwnershipCallback.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/CarAppFocusManager.java",
           "description": "Listener to get notification for app getting information on app type ownership loss."
         },
         {
           "name": "CarAudioManager",
           "link": "https://developer.android.com/reference/android/car/media/CarAudioManager.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/media/CarAudioManager.java",
           "description": "APIs for handling car specific audio stuff."
         },
         {
           "name": "CarAudioPatchHandle",
           "link": "https://developer.android.com/reference/android/car/media/CarAudioPatchHandle.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/media/CarAudioPatchHandle.java",
           "description": "A class to encapsulate the handle for a system level audio patch."
         },
         {
           "name": "CarConfigurationManager",
           "link": "https://developer.android.com/reference/android/car/settings/CarConfigurationManager.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/settings/CarConfigurationManager.java",
           "description": "Manager that exposes car configuration values that are stored on the system."
         },
         {
           "name": "CarInfoManager",
           "link": "https://developer.android.com/reference/android/car/CarInfoManager.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/CarInfoManager.java",
           "description": "Utility to retrieve various static information from car."
         },
         {
           "name": "CarMenuCallbacks",
           "link": "https://developer.android.com/reference/android/car/app/menu/CarMenuCallbacks.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/app/menu/CarMenuCallbacks.java",
           "description": "The callbacks that a car app needs to pass to a car ui provider for car menu interactions."
         },
         {
           "name": "CarMenuConstants",
           "link": "https://developer.android.com/reference/android/car/app/menu/CarMenuConstants.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/app/menu/CarMenuConstants.java",
           "description": "Contains keys to the metadata of car menu, such as id, title, icon, etc."
         },
         {
           "name": "CarMenuConstants.MenuItemConstants",
-          "link": "https://developer.android.com/reference/android/car/app/menu/CarMenuConstants.MenuItemConstants.html"
+          "link": "https://developer.android.com/reference/android/car/app/menu/CarMenuConstants.MenuItemConstants.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/app/menu/CarMenuConstants.java"
         },
         {
           "name": "CarMenuConstants.MenuItemConstants.MenuItemFlags",
-          "link": "https://developer.android.com/reference/android/car/app/menu/CarMenuConstants.MenuItemConstants.MenuItemFlags.html"
+          "link": "https://developer.android.com/reference/android/car/app/menu/CarMenuConstants.MenuItemConstants.MenuItemFlags.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/app/menu/CarMenuConstants.java"
         },
         {
           "name": "CarMenuConstants.MenuItemConstants.WidgetTypes",
-          "link": "https://developer.android.com/reference/android/car/app/menu/CarMenuConstants.MenuItemConstants.WidgetTypes.html"
+          "link": "https://developer.android.com/reference/android/car/app/menu/CarMenuConstants.MenuItemConstants.WidgetTypes.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/app/menu/CarMenuConstants.java"
         },
         {
           "name": "CarNavigationStatusManager",
           "link": "https://developer.android.com/reference/android/car/navigation/CarNavigationStatusManager.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/navigation/CarNavigationStatusManager.java",
           "description": "API for providing navigation status for instrument cluster."
         },
         {
           "name": "CarNotConnectedException",
           "link": "https://developer.android.com/reference/android/car/CarNotConnectedException.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/CarNotConnectedException.java",
           "description": "Exception thrown when car is not connected for the API which requires car connection."
         },
         {
           "name": "CarPackageManager",
           "link": "https://developer.android.com/reference/android/car/content/pm/CarPackageManager.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/content/pm/CarPackageManager.java",
           "description": "Provides car specific API related with package management."
         },
         {
           "name": "CarSensorEvent",
           "link": "https://developer.android.com/reference/android/car/hardware/CarSensorEvent.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/hardware/CarSensorEvent.java",
           "description": "A CarSensorEvent object corresponds to a single sensor event coming from the car."
         },
         {
           "name": "CarSensorEvent.EnvironmentData",
-          "link": "https://developer.android.com/reference/android/car/hardware/CarSensorEvent.EnvironmentData.html"
+          "link": "https://developer.android.com/reference/android/car/hardware/CarSensorEvent.EnvironmentData.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/hardware/CarSensorEvent.java"
         },
         {
           "name": "CarSensorManager",
           "link": "https://developer.android.com/reference/android/car/hardware/CarSensorManager.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/hardware/CarSensorManager.java",
           "description": "API for monitoring car sensor data."
         },
         {
           "name": "CarSensorManager.OnSensorChangedListener",
           "link": "https://developer.android.com/reference/android/car/hardware/CarSensorManager.OnSensorChangedListener.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/hardware/CarSensorManager.java",
           "description": "Listener for car sensor data change."
         },
         {
           "name": "CarSettings",
           "link": "https://developer.android.com/reference/android/car/settings/CarSettings.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/settings/CarSettings.java",
           "description": "System level car related settings."
         },
         {
           "name": "CarSettings.Global",
           "link": "https://developer.android.com/reference/android/car/settings/CarSettings.Global.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/settings/CarSettings.java",
           "description": "Global car settings, containing preferences that always apply identically to all defined users."
         },
         {
           "name": "CarUiEntry",
           "link": "https://developer.android.com/reference/android/car/app/menu/CarUiEntry.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/app/menu/CarUiEntry.java",
           "description": "A base class for a car ui entry which is used for loading and manipulating common car app decor window (CarUi)."
         },
         {
           "name": "CarUxRestrictions",
           "link": "https://developer.android.com/reference/android/car/drivingstate/CarUxRestrictions.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/drivingstate/CarUxRestrictions.java",
           "description": "Car UX Restrictions event."
         },
         {
           "name": "CarUxRestrictions.Builder",
           "link": "https://developer.android.com/reference/android/car/drivingstate/CarUxRestrictions.Builder.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/drivingstate/CarUxRestrictions.java",
           "description": "Builder class for CarUxRestrictions"
         },
         {
           "name": "CarUxRestrictions.CarUxRestrictionsInfo",
-          "link": "https://developer.android.com/reference/android/car/drivingstate/CarUxRestrictions.CarUxRestrictionsInfo.html"
+          "link": "https://developer.android.com/reference/android/car/drivingstate/CarUxRestrictions.CarUxRestrictionsInfo.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/drivingstate/CarUxRestrictions.java"
         },
         {
           "name": "CarUxRestrictionsManager",
           "link": "https://developer.android.com/reference/android/car/drivingstate/CarUxRestrictionsManager.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/drivingstate/CarUxRestrictionsManager.java",
           "description": "API to register and get the User Experience restrictions imposed based on the car's driving state."
         },
         {
           "name": "CarUxRestrictionsManager.OnUxRestrictionsChangedListener",
           "link": "https://developer.android.com/reference/android/car/drivingstate/CarUxRestrictionsManager.OnUxRestrictionsChangedListener.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/drivingstate/CarUxRestrictionsManager.java",
           "description": "Listener Interface for clients to implement to get updated on driving state related changes."
         },
         {
           "name": "RootMenu",
           "link": "https://developer.android.com/reference/android/car/app/menu/RootMenu.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/app/menu/RootMenu.java",
           "description": "Stores the root id for the menu."
         },
         {
           "name": "SearchBoxEditListener",
-          "link": "https://developer.android.com/reference/android/car/app/menu/SearchBoxEditListener.html"
+          "link": "https://developer.android.com/reference/android/car/app/menu/SearchBoxEditListener.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/app/menu/SearchBoxEditListener.java"
         },
         {
           "name": "SpeedBumpConfiguration",
           "link": "https://developer.android.com/reference/android/car/settings/SpeedBumpConfiguration.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/settings/SpeedBumpConfiguration.java",
           "description": "A configuration struct that holds information for tweaking SpeedBump settings."
         },
         {
           "name": "SubscriptionCallbacks",
           "link": "https://developer.android.com/reference/android/car/app/menu/SubscriptionCallbacks.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/app/menu/SubscriptionCallbacks.java",
           "description": "The callbacks to receive menu items updates."
         },
         {
           "name": "VehiclePropertyIds",
           "link": "https://developer.android.com/reference/android/car/VehiclePropertyIds.html",
+          "source_link": "https://android.googlesource.com/platform/packages/services/Car/+/master/car-lib/src/android/car/VehiclePropertyIds.java",
           "description": "Copy from android.hardware.automotive.vehicle-V2.0-java_gen_java/gen/android/hardware/automotive /vehicle/V2_0."
         }
       ]

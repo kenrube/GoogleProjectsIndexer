@@ -188,3 +188,4 @@ Doc relative path,Source code relative path prefix
 /android/arch/persistence/db/,/platform/frameworks/support/+/androidx-master-release/persistence/db/src/main/java/androidx/sqlite/db/
 /android/arch/persistence/db/framework/,/platform/frameworks/support/+/androidx-master-release/persistence/db-framework/src/main/java/androidx/sqlite/db/framework/
 /android/arch/persistence/room/,/platform/frameworks/support/+/androidx-master-release/room/common/src/main/java/androidx/room/
+/android/car/,/platform/packages/services/Car/+/master/car-lib/src/android/car/
