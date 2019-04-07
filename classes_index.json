@@ -53437,221 +53437,263 @@
         {
           "name": "BaseObservable",
           "link": "https://developer.android.com/reference/android/databinding/BaseObservable.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/BaseObservable.java",
           "description": "A convenience class that implements Observable interface and provides notifyPropertyChanged(int) and notifyChange() methods."
         },
         {
           "name": "Bindable",
           "link": "https://developer.android.com/reference/android/databinding/Bindable.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/Bindable.java",
           "description": "The Bindable annotation should be applied to any getter accessor method of an Observable class."
         },
         {
           "name": "BindingAdapter",
           "link": "https://developer.android.com/reference/android/databinding/BindingAdapter.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/BindingAdapter.java",
           "description": "BindingAdapter is applied to methods that are used to manipulate how values with expressions are set to views."
         },
         {
           "name": "BindingConversion",
           "link": "https://developer.android.com/reference/android/databinding/BindingConversion.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/BindingConversion.java",
           "description": "Annotate methods that are used to automatically convert from the expression type to the value used in the setter."
         },
         {
           "name": "BindingMethod",
           "link": "https://developer.android.com/reference/android/databinding/BindingMethod.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/BindingMethod.java",
           "description": "Used within an BindingMethods annotation to describe a renaming of an attribute to the setter used to set that attribute."
         },
         {
           "name": "BindingMethods",
           "link": "https://developer.android.com/reference/android/databinding/BindingMethods.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/BindingMethods.java",
           "description": "Used to enumerate attribute-to-setter renaming."
         },
         {
           "name": "CallbackRegistry",
           "name_extended": "CallbackRegistry\u003cC, T, A\u003e",
           "link": "https://developer.android.com/reference/android/databinding/CallbackRegistry.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/CallbackRegistry.java",
           "description": "A utility for storing and notifying callbacks."
         },
         {
           "name": "CallbackRegistry.NotifierCallback",
           "name_extended": "CallbackRegistry.NotifierCallback\u003cC, T, A\u003e",
           "link": "https://developer.android.com/reference/android/databinding/CallbackRegistry.NotifierCallback.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/CallbackRegistry.java",
           "description": "Class used to notify events from CallbackRegistry."
         },
         {
           "name": "Converters",
           "link": "https://developer.android.com/reference/android/databinding/adapters/Converters.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/baseAdapters/src/main/java/android/databinding/adapters/Converters.java",
           "description": "Build in converters to converts for color."
         },
         {
           "name": "DataBindingComponent",
           "link": "https://developer.android.com/reference/android/databinding/DataBindingComponent.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/DataBindingComponent.java",
           "description": "This interface is generated during compilation to contain getters for all used instance BindingAdapters."
         },
         {
           "name": "DataBindingUtil",
           "link": "https://developer.android.com/reference/android/databinding/DataBindingUtil.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/DataBindingUtil.java",
           "description": "Utility class to create ViewDataBinding from layouts."
         },
         {
           "name": "InverseBindingAdapter",
           "link": "https://developer.android.com/reference/android/databinding/InverseBindingAdapter.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/InverseBindingAdapter.java",
           "description": "InverseBindingAdapter is associated with a method used to retrieve the value for a View when setting values gathered from the View."
         },
         {
           "name": "InverseBindingListener",
           "link": "https://developer.android.com/reference/android/databinding/InverseBindingListener.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/InverseBindingListener.java",
           "description": "A listener implemented by all two-way bindings to be notified when a triggering change happens."
         },
         {
           "name": "InverseBindingMethod",
           "link": "https://developer.android.com/reference/android/databinding/InverseBindingMethod.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/InverseBindingMethod.java",
           "description": "InverseBindingMethod is used to identify how to listen for changes to a View property and which getter method to call."
         },
         {
           "name": "InverseBindingMethods",
           "link": "https://developer.android.com/reference/android/databinding/InverseBindingMethods.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/InverseBindingMethods.java",
           "description": "Used to enumerate attribute, getter, and event association."
         },
         {
           "name": "InverseMethod",
           "link": "https://developer.android.com/reference/android/databinding/InverseMethod.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/InverseMethod.java",
           "description": "The InverseMethod annotation may be applied to any method used in two-way data binding to declare the method used to invert the call when going from the View's attribute value to the bound data value."
         },
         {
           "name": "ListChangeRegistry",
           "link": "https://developer.android.com/reference/android/databinding/ListChangeRegistry.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/ListChangeRegistry.java",
           "description": "Utility class for managing ObservableList callbacks."
         },
         {
           "name": "ListenerUtil",
           "link": "https://developer.android.com/reference/android/databinding/adapters/ListenerUtil.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/baseAdapters/src/main/java/android/databinding/adapters/ListenerUtil.java",
           "description": "Utility class that helps with tracking listeners for views from binding adapters."
         },
         {
           "name": "MapChangeRegistry",
           "link": "https://developer.android.com/reference/android/databinding/MapChangeRegistry.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/MapChangeRegistry.java",
           "description": "Utility class for managing ObservableMap callbacks."
         },
         {
           "name": "MergedDataBinderMapper",
           "link": "https://developer.android.com/reference/android/databinding/MergedDataBinderMapper.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/MergedDataBinderMapper.java",
           "description": "A data binding mapper that merges other mappers."
         },
         {
           "name": "Observable",
           "link": "https://developer.android.com/reference/android/databinding/Observable.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/Observable.java",
           "description": "Observable classes provide a way in which data bound UI can be notified of changes."
         },
         {
           "name": "Observable.OnPropertyChangedCallback",
           "link": "https://developer.android.com/reference/android/databinding/Observable.OnPropertyChangedCallback.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/Observable.java",
           "description": "The callback that is called by Observable when an observable property has changed."
         },
         {
           "name": "ObservableArrayList",
           "name_extended": "ObservableArrayList\u003cT\u003e",
           "link": "https://developer.android.com/reference/android/databinding/ObservableArrayList.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/ObservableArrayList.java",
           "description": "An ObservableList implementation using ArrayList as an implementation."
         },
         {
           "name": "ObservableArrayMap",
           "name_extended": "ObservableArrayMap\u003cK, V\u003e",
-          "link": "https://developer.android.com/reference/android/databinding/ObservableArrayMap.html"
+          "link": "https://developer.android.com/reference/android/databinding/ObservableArrayMap.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/ObservableArrayMap.java"
         },
         {
           "name": "ObservableBoolean",
           "link": "https://developer.android.com/reference/android/databinding/ObservableBoolean.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/ObservableBoolean.java",
           "description": "An observable class that holds a primitive boolean."
         },
         {
           "name": "ObservableByte",
           "link": "https://developer.android.com/reference/android/databinding/ObservableByte.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/ObservableByte.java",
           "description": "An observable class that holds a primitive byte."
         },
         {
           "name": "ObservableChar",
           "link": "https://developer.android.com/reference/android/databinding/ObservableChar.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/ObservableChar.java",
           "description": "An observable class that holds a primitive char."
         },
         {
           "name": "ObservableDouble",
           "link": "https://developer.android.com/reference/android/databinding/ObservableDouble.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/ObservableDouble.java",
           "description": "An observable class that holds a primitive double."
         },
         {
           "name": "ObservableField",
           "name_extended": "ObservableField\u003cT\u003e",
           "link": "https://developer.android.com/reference/android/databinding/ObservableField.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/ObservableField.java",
           "description": "An object wrapper to make it observable."
         },
         {
           "name": "ObservableFloat",
           "link": "https://developer.android.com/reference/android/databinding/ObservableFloat.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/ObservableFloat.java",
           "description": "An observable class that holds a primitive float."
         },
         {
           "name": "ObservableInt",
           "link": "https://developer.android.com/reference/android/databinding/ObservableInt.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/ObservableInt.java",
           "description": "An observable class that holds a primitive int."
         },
         {
           "name": "ObservableList",
           "name_extended": "ObservableList\u003cT\u003e",
           "link": "https://developer.android.com/reference/android/databinding/ObservableList.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/ObservableList.java",
           "description": "A List that notifies when changes are made."
         },
         {
           "name": "ObservableList.OnListChangedCallback",
           "name_extended": "ObservableList.OnListChangedCallback\u003cT extends ObservableList\u003e",
           "link": "https://developer.android.com/reference/android/databinding/ObservableList.OnListChangedCallback.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/ObservableList.java",
           "description": "The callback that is called by ObservableList when the list has changed."
         },
         {
           "name": "ObservableLong",
           "link": "https://developer.android.com/reference/android/databinding/ObservableLong.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/ObservableLong.java",
           "description": "An observable class that holds a primitive long."
         },
         {
           "name": "ObservableMap",
           "name_extended": "ObservableMap\u003cK, V\u003e",
           "link": "https://developer.android.com/reference/android/databinding/ObservableMap.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/ObservableMap.java",
           "description": "A Map that notifies when items change."
         },
         {
           "name": "ObservableMap.OnMapChangedCallback",
           "name_extended": "ObservableMap.OnMapChangedCallback\u003cT extends ObservableMap\u003cK, V\u003e, K, V\u003e",
           "link": "https://developer.android.com/reference/android/databinding/ObservableMap.OnMapChangedCallback.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/baseLibrarySupport/src/main/java/android/databinding/ObservableMap.java",
           "description": "A callback receiving notifications when an ObservableMap changes."
         },
         {
           "name": "ObservableParcelable",
           "name_extended": "ObservableParcelable\u003cT extends Parcelable\u003e",
           "link": "https://developer.android.com/reference/android/databinding/ObservableParcelable.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/ObservableParcelable.java",
           "description": "An observable class that holds a parcelable object."
         },
         {
           "name": "ObservableShort",
           "link": "https://developer.android.com/reference/android/databinding/ObservableShort.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/ObservableShort.java",
           "description": "An observable class that holds a primitive short."
         },
         {
           "name": "OnRebindCallback",
           "name_extended": "OnRebindCallback\u003cT extends ViewDataBinding\u003e",
           "link": "https://developer.android.com/reference/android/databinding/OnRebindCallback.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/OnRebindCallback.java",
           "description": "Listener set on addOnRebindCallback(OnRebindCallback) that is called when bound values must be reevaluated in executePendingBindings()."
         },
         {
           "name": "PropertyChangeRegistry",
           "link": "https://developer.android.com/reference/android/databinding/PropertyChangeRegistry.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/PropertyChangeRegistry.java",
           "description": "Utility class for managing Observable callbacks."
         },
         {
           "name": "ViewDataBinding",
           "link": "https://developer.android.com/reference/android/databinding/ViewDataBinding.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/ViewDataBinding.java",
           "description": "Base class for generated data binding classes."
         },
         {
           "name": "ViewStubProxy",
           "link": "https://developer.android.com/reference/android/databinding/ViewStubProxy.html",
+          "source_link": "https://android.googlesource.com/platform/frameworks/data-binding/+/studio-master-dev/extensions-support/library/src/main/java/android/databinding/ViewStubProxy.java",
           "description": "This class represents a ViewStub before and after inflation."
         }
       ]
